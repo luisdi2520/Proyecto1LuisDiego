@@ -81,7 +81,20 @@ def elecc_pjHollow(hollow):
     else:
         return None
 
+def guardarPuntaje(nombre, puntaje, filepath="puntaje.txt"):
+    puntaje_act = 0
 
+    try:
+        with open(filepath, "r", encoding="utf-8") as file:
+            linea = file.read().strip()
+            if linea !="":
+                puntaje_act = int(linea.split(":")[1].strip())
+    except:
+        pass
+
+    if puntaje > puntaje_act:
+        with open (filepath, "w", encoding="utf-8") as file:
+            file.write(f"{nombre}: {puntaje}\n")
     
 
      
