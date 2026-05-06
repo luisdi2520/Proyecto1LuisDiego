@@ -1,6 +1,6 @@
 import tkinter as tk 
 from tkinter import messagebox
-from logica import turnos, elecc_pjHollow
+from logica import turnos, elecc_pjHollow, guardarPuntaje
 
 class Batalla(tk.Frame):
     def __init__(self, master, jugador, equip, hollow, avatar, fin):
@@ -122,8 +122,10 @@ class Batalla(tk.Frame):
 
         if not dispo_hollow:
             self.hollow["vencido"] = True
+            guardarPuntaje(self.jugador, self.puntajeJugador)
             messagebox.showinfo("Ganaste", f"Venciste al {self.hollow['nombre']}")
             self.fin()
         if not dispo_jugador:
+            guardarPuntaje(self.jugador, self.puntajeJugador)
             messagebox.showinfo("Perdiste", f"El{self.hollow['nombre']} te vencio")
             self.fin()
