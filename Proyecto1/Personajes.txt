@@ -1,0 +1,16 @@
+nombre,hp,def,atk
+Baymax,100,80,55
+Scar,90,60,75
+Buzz Lightyear,95,71,73
+Olaf,80,40,70
+Simba,100,80,55
+Hades,90,60,75
+Peter Pan,95,71,73
+Rapunzel,80,40,70
+Hercules,100,80,55
+Tarzan,90,60,75
+Goofy,95,71,73
+Dory,80,40,70
+Mulan,90,60,65
+Donald,90,65,73
+Mickey Mouse,100,100,90
