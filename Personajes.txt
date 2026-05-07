@@ -1,16 +1,16 @@
-nombre,hp,def,atk
-Baymax,100,80,55
-Scar,90,60,75
-Buzz Lightyear,95,71,73
-Olaf,80,40,70
-Simba,100,80,55
-Hades,90,60,75
-Peter Pan,95,71,73
-Rapunzel,80,40,70
-Hercules,100,80,55
-Tarzan,90,60,75
-Goofy,95,71,73
-Dory,80,40,70
-Mulan,90,60,65
-Donald,90,65,73
-Mickey Mouse,100,100,90
+nombre,hp,def,atk,imagen
+Baymax,100,80,55,baymax.png
+Scar,90,60,75,scar.png
+Buzz Lightyear,95,71,73,buzz.png
+Olaf,80,40,70,olaf.png
+Simba,100,80,55,simba.png
+Hades,90,60,75,hades.png
+Peter Pan,95,71,73,peter.png
+Rapunzel,80,40,70,rapunzel.png
+Hercules,100,80,55,hercules.png
+Tarzan,90,60,75,tarzan.png
+Goofy,95,71,73,goofy.png
+Dory,80,40,70,dory.png
+Mulan,90,60,65,mulan.png
+Donald,90,65,73,donald.png
+Mickey Mouse,100,100,90,mickey.png

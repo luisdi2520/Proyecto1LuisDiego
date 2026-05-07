@@ -18,6 +18,7 @@ def load_Personajes(filepath="Personajes.txt"):
                 "DEF":    int(parts[2]),
                 "ATK":    int(parts[3]),
                 "KO":     False
+                "imagen": parts[4]
             }
             personajes.append(personaje)
 
