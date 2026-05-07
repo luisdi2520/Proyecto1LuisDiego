@@ -17,7 +17,7 @@ def load_Personajes(filepath="Personajes.txt"):
                 "max_hp": int(parts[1]),
                 "DEF":    int(parts[2]),
                 "ATK":    int(parts[3]),
-                "KO":     False
+                "KO":     False,
                 "imagen": parts[4]
             }
             personajes.append(personaje)
