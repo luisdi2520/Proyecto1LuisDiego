@@ -92,7 +92,7 @@ class Batalla(tk.Frame):
         if self.p_hollow:
             self.label_hollow.config(text=f"{self.p_hollow['nombre']}")
             self.hp_hollow.config(text=f"HP:{self.p_hollow['hp']}")
-            ima = Image.open(f"Imagenes{self.p_hollow['imagen']}")
+            ima = Image.open(f"Imagenes/{self.p_hollow['imagen']}")
             ima = ima.resize((100,100))
             foto = ImageTk.PhotoImage(ima)
             self.img_hollow.config(image=foto)
@@ -100,7 +100,7 @@ class Batalla(tk.Frame):
         if self.p_jugador:
             self.label_jugador.config(text=f"{self.p_jugador['nombre']}")
             self.hp_jugador.config(text=f"HP:{self.p_jugador['hp']}")
-            imaJuga = Image.open(f"Imagenes{self.p_jugador['imagen']}")
+            imaJuga = Image.open(f"Imagenes/{self.p_jugador['imagen']}")
             imaJuga = imaJuga.resize((100,100))
             foto = ImageTk.PhotoImage(imaJuga)
             self.img_jugador.config(image=foto)
