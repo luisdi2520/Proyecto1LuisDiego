@@ -33,7 +33,7 @@ class PantallaInicio(tk.Frame):
         #seleccion de avatar
         avatar = tk.Label(self, text="Selecione AVatar:")
         avatar.pack()
-        for avatar in ["Avatar1", "Avatar2", "Avatar3"]:
+        for avatar in ["avatar1.png", "avatar2.png", "avatar3.png"]:
             avatar_button = tk.Radiobutton(self, text= avatar, variable= self.avatar_selecc, value=avatar)
             avatar_button.pack()
         
