@@ -34,6 +34,7 @@ def volverMapa(puntaje):
      ventana.update()
      if all (h["vencido"] for  h in equipHollow):
           guardarPuntaje(nombreJuga, puntajeTotal)
+          return 
      mapa = Mapa(ventana, equipHollow, iniBatalla=ab_batalla)
      mapa.pack(fill="both", expand=True)
      pantalla_act = mapa
