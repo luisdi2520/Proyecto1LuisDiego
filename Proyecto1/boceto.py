@@ -26,7 +26,7 @@ def ab_batalla(hollow):
     batalla.pack(fill="both", expand=True)
     pantalla_act = batalla
 
-def volverMapa():
+def volverMapa(puntaje):
      global pantalla_act, puntajeTotal
      puntajeTotal += puntaje
      pantalla_act.destroy()

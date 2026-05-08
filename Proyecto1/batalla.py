@@ -138,7 +138,7 @@ class Batalla(tk.Frame):
         if not dispo_hollow:
             self.hollow["vencido"] = True
             messagebox.showinfo("Ganaste", f"Venciste al {self.hollow['nombre']}")
-            self.fin()
-        if not dispo_jugador:
+            self.fin(self.puntajeJugador)
+        elif not dispo_jugador:
             messagebox.showinfo("Perdiste", f"El{self.hollow['nombre']} te vencio")
-            self.fin()
+            self.fin(self.puntajeJugador)
