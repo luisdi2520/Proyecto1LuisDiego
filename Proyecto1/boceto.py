@@ -1,11 +1,12 @@
 import tkinter as tk 
-from logica import load_Personajes, Crearhollows
+from logica import load_Personajes, Crearhollows, guardarPuntaje
 from pantalla import PantallaInicio
 from mapa import Mapa
 from batalla import Batalla
 pantalla_act = None
 equip = None
 equipHollow = None
+nombreJuga = None
 puntajeTotal = 0
 def iniciar(nombre, equipo, avatar):
      global pantalla_act, equip, equipHollow, nombreJuga,avatarJuga
@@ -31,6 +32,8 @@ def volverMapa(puntaje):
      puntajeTotal += puntaje
      pantalla_act.destroy()
      ventana.update()
+     if all (h["vencido"] for  h in equipHollow):
+          guardarPuntaje(nombreJuga, puntajeTotal)
      mapa = Mapa(ventana, equipHollow, iniBatalla=ab_batalla)
      mapa.pack(fill="both", expand=True)
      pantalla_act = mapa
