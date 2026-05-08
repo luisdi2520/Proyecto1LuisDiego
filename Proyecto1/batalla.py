@@ -1,4 +1,5 @@
 import tkinter as tk 
+from PIL import Image, ImageTk
 from tkinter import messagebox
 from logica import turnos, elecc_pjHollow
 
@@ -32,11 +33,15 @@ class Batalla(tk.Frame):
         self.label_hollow.pack()
         self.hp_hollow = tk.Label(self, text="")
         self.hp_hollow.pack()
+        self.img_hollow = tk.Label(self)
+        self.img_hollow.pack()
 
         self.label_jugador = tk.Label(self, text="")
         self.label_jugador.pack()
         self.hp_jugador = tk.Label(self, text="")
         self.hp_jugador.pack()
+        self.img_jugador = tk.Label(self)
+        self.img_jugador.pack()
 
         self.logText = tk.Text(self, height=8, state="disabled")
         self.logText.pack()
@@ -87,9 +92,19 @@ class Batalla(tk.Frame):
         if self.p_hollow:
             self.label_hollow.config(text=f"{self.p_hollow['nombre']}")
             self.hp_hollow.config(text=f"HP:{self.p_hollow['hp']}")
+            ima = Image.open(f"Imagenes{self.p_hollow['imagen']}")
+            ima = ima.resize((100,100))
+            foto = ImageTk.PhotoImage(ima)
+            self.img_hollow.config(image=foto)
+            self.img_hollow.image = foto 
         if self.p_jugador:
             self.label_jugador.config(text=f"{self.p_jugador['nombre']}")
             self.hp_jugador.config(text=f"HP:{self.p_jugador['hp']}")
+            imaJuga = Image.open(f"Imagenes{self.p_jugador['imagen']}")
+            imaJuga = imaJuga.resize((100,100))
+            foto = ImageTk.PhotoImage(imaJuga)
+            self.img_jugador.config(image=foto)
+            self.img_jugador.image = foto
         self.labelPuntaje.config(text=f"Puntaje - Jugador: {self.puntajeJugador} | Hollow: {self.puntajeHollow}")
     
     def mostrarLog(self, log):
