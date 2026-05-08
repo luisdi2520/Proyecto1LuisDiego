@@ -28,8 +28,8 @@ class Batalla(tk.Frame):
         label.pack(pady=10)
         juga = tk.Label(self, text=f"Jugador: {self.jugador}")
         juga.pack()
-        labelAvatar = tk.Label(self, text=f"Avatar: {self.avatar}")
-        labelAvatar.pack()
+        self.imgAva = tk.Label(self)
+        self.imgAva.pack()
         self.label_hollow = tk.Label(self, text="")
         self.label_hollow.pack()
         self.hp_hollow = tk.Label(self, text="")
@@ -59,8 +59,8 @@ class Batalla(tk.Frame):
         imgAva = Image.open(f"Imagenes/avatares/{self.avatar}")
         imgAva = imgAva.resize((80,80))
         foto = ImageTk.PhotoImage(imgAva)
-        self.img_avatar.config(image=foto)
-        self.img_avatar.image = foto
+        self.imgAva.config(image=foto)
+        self.imgAva.image = foto
 
 
     def elegirPJ_ini(self):
