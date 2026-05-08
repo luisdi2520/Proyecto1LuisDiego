@@ -20,6 +20,7 @@ class Batalla(tk.Frame):
         self.puntajeHollow = 0
 
         self.pantalla()
+        self.cargarAva()
         self.elegirPJ_ini()
     
     def pantalla(self):
@@ -54,6 +55,14 @@ class Batalla(tk.Frame):
         PJ = tk.Button(self,text="EQUIPO", command=self.cambiarPJ)
         PJ.pack()
     
+    def cargarAva(self):
+        imgAva = Image.open(f"Imagenes/avatares/{self.avatar}")
+        imgAva = imgAva.resize((80,80))
+        foto = ImageTk.PhotoImage(imgAva)
+        self.img_avatar.config(image=foto)
+        self.img_avatar.image = foto
+
+
     def elegirPJ_ini(self):
         #Hollow
         self.p_hollow = elecc_pjHollow(self.hollow)
