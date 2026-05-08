@@ -6,6 +6,7 @@ from batalla import Batalla
 pantalla_act = None
 equip = None
 equipHollow = None
+puntajeTotal = 0
 def iniciar(nombre, equipo, avatar):
      global pantalla_act, equip, equipHollow, nombreJuga,avatarJuga
      equip = equipo
@@ -26,7 +27,8 @@ def ab_batalla(hollow):
     pantalla_act = batalla
 
 def volverMapa():
-     global pantalla_act
+     global pantalla_act, puntajeTotal
+     puntajeTotal += puntaje
      pantalla_act.destroy()
      ventana.update()
      mapa = Mapa(ventana, equipHollow, iniBatalla=ab_batalla)
